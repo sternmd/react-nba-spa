@@ -7,7 +7,7 @@ class Layout extends Component {
         showNav: false
     }
 
-    onHideNav = (boolean) => {
+    toggleSideNav = (boolean) => {
         this.setState({
             showNav: boolean
         })
