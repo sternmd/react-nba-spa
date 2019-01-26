@@ -3,12 +3,24 @@ import './layout.css';
 import Header from '../../../components/Header/header.js';
 import Footer from '../../../components/Footer/footer.js';
 class Layout extends Component {
-    state = {}
+    state = {
+        showNav: false
+    }
+
+    onHideNav = (boolean) => {
+        this.setState({
+            showNav: boolean
+        })
+    }
 
     render() {
         return(
             <div>
-                <Header/>
+                <Header
+                showNav={this.state.showNav}
+                onHideNav={() => this.toggleSideNav(false)}
+                onOpenNav={() => this.toggleSideNav(true)}
+                />
                 {this.props.children}
                 <Footer />
             </div>
