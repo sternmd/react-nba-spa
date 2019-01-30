@@ -10,7 +10,8 @@ const SliderTemplates = (props) => {
         arrows: false,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        ...props.settings // overwrite previous properties
     }
 
     let template = null;

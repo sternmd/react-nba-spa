@@ -6,9 +6,13 @@
     align-items: center;
 }
 
-.logo img {
+.footer .logo img {
     height: 20px;
     padding: 10px;
+}
+
+.footer .logo {
+    flex-grow: 0;
 }
 
 .footer-right {
