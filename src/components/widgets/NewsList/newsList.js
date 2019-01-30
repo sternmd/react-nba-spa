@@ -40,13 +40,23 @@ class NewsList extends Component {
             case('card'):
             template= this.state.items.map((item,i) => {
                 return (
-                    <div className="newsList">
-                        <div className="newsList_item">
-                            <Link to={`/articles/${item.id}`}>
-                            <h2>{item.title}</h2>
-                            </Link>
+                    <CSSTransition
+                        classNames={{
+                            enter: 'newsList_wrapper',
+                            enterActive: 'newsList_wrapper_enter'
+                        }}
+                        timeout={500}
+                        key={i}
+                    >
+                        <div className="newsList">
+                            <div className="newsList_item">
+                                <Link to={`/articles/${item.id}`}>
+                                <h2>{item.title}</h2>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
+                    </CSSTransition>
+
                 )
             })
             break;
@@ -57,11 +67,18 @@ class NewsList extends Component {
     }
 
     render() {
-        console.log(this.state.items)
         return (
             <div>
-                {this.renderNews(this.props.type)}
-                <div onClick={()=> this.loadMore()}>LOAD MORE</div>
+                <TransitionGroup
+                    component="div"
+                    className="list"
+                >
+                    {this.renderNews(this.props.type)}
+                </TransitionGroup>
+                
+                <div onClick={()=> this.loadMore()}>
+                    LOAD MORE
+                </div>
             </div>
         );
     }
