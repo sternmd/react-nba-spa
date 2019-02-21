@@ -34,3 +34,7 @@
     background-position: center center !important;
     background: url('/images/play.png');
 }
+
+.relatedWrapper {
+    margin: 0 5px;
+}
