@@ -12,8 +12,8 @@ const NewsMain = () => (
             amount={3}
         />
         <NewsList 
-            type="cardMain"
-            loadMore={true}
+            type="card"
+            loadmore={true}
             start={3}
             amount={10}
         />
