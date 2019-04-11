@@ -7,8 +7,8 @@ Fullstack mobile React SPA for mock NBA league news.
 * [React](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 * [MongoDB](https://www.mongodb.com/)
-* [Firebase] (https://firebase.google.com/)
-* [Webpack] (https://webpack.js.org/)
+* [Firebase](https://firebase.google.com/)
+* [Webpack](https://webpack.js.org/)
 
 ## Acknowledgments
 
