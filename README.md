@@ -1,3 +1,5 @@
+![](https://i.imgur.com/ekDhS3l.jpg)
+
 # React NBA SPA
 
 Fullstack mobile React SPA for mock NBA league news.
